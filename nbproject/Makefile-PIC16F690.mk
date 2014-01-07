@@ -208,13 +208,10 @@ dist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJ
 	@${RM} dist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.hex 
 	
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    ../../../../../../../MacFiles/Work/Mikes/LED\ Chaser/LEDChaserV2.hex
+dist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
 	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.map  --double=24 --float=24 --opt=all,+asm,-asmfile,+speed,-space,-debug --addrqual=ignore -N31 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,+osccal,-resetbits,-download,-stackcall,+clib "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     -odist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
-	@echo "Creating unified hex file"
-	@"/Applications/microchip/mplabx/mplab_ide.app/Contents/Resources/mplab_ide/mplab_ide/modules/../../bin/hexmate" --edf="/Applications/microchip/mplabx/mplab_ide.app/Contents/Resources/mplab_ide/mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/LEDChaser.X.${IMAGE_TYPE}.hex "../../../../../../../MacFiles/Work/Mikes/LED Chaser/LEDChaserV2.hex" -odist/${CND_CONF}/production/LEDChaser.X.production.unified.hex
-
 endif
 
 
